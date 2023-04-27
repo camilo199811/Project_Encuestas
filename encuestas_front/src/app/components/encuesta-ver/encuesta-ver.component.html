@@ -1,0 +1,43 @@
+
+<br>
+<br>
+<div class="container col-md-6 mb-3" >
+  <button  class="btn btn-info">Mis respuestas</button>
+  <button (click)="contestar()" class="btn btn-primary" style="margin-left: 10px;">Contestar Encuesta</button>
+</div>
+
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Mis encuestas</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>Comentarios</th>
+            <th>Pc</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let encuesta of encuestas"  class="text-center">
+            <td>{{encuesta.id}}</td>
+            <td>{{encuesta.email}}</td>
+            <td>{{encuesta.comentarios}}</td>
+            <td>{{encuesta.marca}}</td>
+            <td>{{encuesta.registro | date:'yyyy/MM/dd, h:mm a'}}</td>
+            <td>
+              <button (click)="verDetalles(encuesta.id)" class="btn btn-primary">Detalles</button>
+              <button (click)="delete(encuesta.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar Respuesta</button>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

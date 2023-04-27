@@ -1,0 +1,27 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Añadir Respuesta</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">Correo</label>
+          <input [(ngModel)]="modelUsuario.emailId" type="text" class="form-control" name="emailId" id="emailId">
+        </div>
+
+        <div class="form-group" >
+          <label for="">Nombre de usuario</label>
+          <input [(ngModel)]="modelUsuario.username"  type="text" class="form-control" name="username" id="username">
+        </div>
+
+        <div class="form-group" >
+          <label for="">Contraseña</label>
+          <input [(ngModel)]="modelUsuario.password"  type="password" class="form-control" name="password" id="password">
+        </div>
+        <button (click)="add()" class="btn btn-danger">Guardar Usuario</button>
+      </form>
+    </div>
+  </div>
+</div>
+

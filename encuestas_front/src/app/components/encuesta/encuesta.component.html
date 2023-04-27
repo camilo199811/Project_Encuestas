@@ -1,0 +1,39 @@
+<br>
+<br>
+<div class="container col-md-6">
+  <button  (click)="listar()" class="btn btn-info">Mis respuestas</button>
+  <button (click)="guardar()" class="btn btn-primary" style="margin-left: 10px;">Contestar Encuesta</button>
+</div>
+
+
+
+
+
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Añadir Respuesta</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">Correo</label>
+          <input [(ngModel)]="modelEncuesta.email" type="text" class="form-control" name="email" id="email" required=""
+          minlength="3" maxlength="100" #correo="ngModel"
+          placeholder="Digite su correo">
+        </div>
+
+        <div class="form-group" >
+          <label for="">Comentarios</label>
+          <input [(ngModel)]="modelEncuesta.comentarios"  type="text" class="form-control" name="comentarios" id="comentarios">
+        </div>
+
+        <div class="form-group" >
+          <label for="">Marca</label>
+          <input [(ngModel)]="modelEncuesta.marca"  type="text" class="form-control" name="marca" id="marca">
+        </div>
+        <button (click)="add()" class="btn btn-danger">Guardar Respuesta</button>
+      </form>
+    </div>
+  </div>
+</div>
